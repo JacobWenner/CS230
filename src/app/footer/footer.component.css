@@ -1,0 +1,10 @@
+.nav-link{
+    font-family:"SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-indent: 30px;
+    text-align: left;
+    color: #565657;
+    
+    opacity: 0.8;
+}
