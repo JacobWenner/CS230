@@ -1,0 +1,57 @@
+.body-3{
+
+  height:900px;
+  background-color: #34283c;
+}
+
+.title{
+  padding-top: 275px;
+  letter-spacing: 0;
+  color:white;
+  font-size: 64px;
+  font-weight: 550;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  text-align: center;
+  margin-right: 225px;
+
+}
+
+.text{
+  color:white;
+  font-size: 30px;
+  font-weight: 550;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  text-align: center;
+  line-height: 1.25;
+  margin-right: 225px;
+
+}
+
+.btn-primary{
+
+  background-color: rgb(0, 0, 0, 0);
+  border-color: rgb(255, 255, 255);
+  border-width: 2px;
+  font-weight: 400;
+  color:rgb(255, 255, 255);
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3px 1px;
+  cursor: pointer;
+  border-radius: 28px;
+  margin-left: 200px;
+
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  color:rgb(0, 0, 0);
+}
+
+.image{
+  margin-left: 30%;
+  height: 85%;
+  width: 80%;
+}

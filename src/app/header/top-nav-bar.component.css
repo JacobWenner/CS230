@@ -5,8 +5,12 @@
 }
 
 .container-fluid{
-    background-color: hsl(0, 0%, 20%);
+    background-color: #020911;
     height: 45px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    opacity: 0.8;
 }
 
 .nav-link{
