@@ -1,3 +1,20 @@
-<div class = "container-fluid">
-    <p>Watch page</p>
+<div class = "d-flex flex-row justify-content-center">
+
+    <div class = "test" *ngFor="let card of cards">
+        <card 
+        title = {{card.title}}
+        imagePath = {{card.imagePath}}
+        price = {{card.price}}
+        size = {{card.size}}
+        display = {{card.display}}
+        gps = {{card.gps}}
+        gpsCellular = {{card.gpsCellular}}
+        ecg = {{card.ecg}}
+        heartRate = {{card.heartRate}}
+        familySetup = {{card.familySetup}}
+        waterResistance = {{card.waterResistance}}
+        ></card>
+    </div>
+
+
 </div>

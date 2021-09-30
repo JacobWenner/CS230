@@ -1,0 +1,43 @@
+export const watch_compare = 
+[
+    {
+        title: "Apple Watch Series 6",
+        price: "From $399",
+        imagePath: "./assets/watch_s6.jpg",
+        size: "44mm or 40mm case size",
+        display: "Always-On Retina display",
+        gps: "GPS + Cellular",
+        gpsCellular: "GPS",
+        ecg: "ECG app",
+        heartRate: "High and low heart rate notifications",
+        familySetup: "Supports Family Setup",
+        waterResistance: "Water resistant 50 meters",
+    },
+    {
+        title: "Apple Watch SE",
+        price: "From $279",
+        imagePath: "./assets/watch_se.jpg",
+        size: "44mm or 40mm case size",
+        display: "Retina display",
+        gps: "GPS + Cellular",
+        gpsCellular: "GPS",
+        ecg: "-",
+        heartRate: "High and low heart rate notifications",
+        familySetup: "Supports Family Setup",
+        waterResistance: "Water resistant 50 meters",
+    },
+    {
+        title: "Apple Watch Series 3",
+        price: "From $199",
+        imagePath: "./assets/watch_s3.jpg",
+        size: "42mm or 38mm case size",
+        display: "Retina display",
+        gps: "-",
+        gpsCellular: "GPS",
+        ecg: "-",
+        heartRate: "High and low heart rate notifications",
+        familySetup: "-",
+        waterResistance: "Water resistant 50 meters",
+    },
+
+]

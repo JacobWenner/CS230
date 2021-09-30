@@ -20,7 +20,7 @@ import { WatchComponent } from './body/watch.component';
 import { TvComponent } from './body/tv_page/tv.component';
 import { MusicComponent } from './body/music_page/music.component';
 import { SupportComponent } from './body/support_page/support.component';
-
+import { CardComponent } from './body/card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { SupportComponent } from './body/support_page/support.component';
     Row_2Component,
     Row_3Component,
     BodyComponent,
+    CardComponent,
     FooterComponent,
     MacComponent,
     IpadComponent,

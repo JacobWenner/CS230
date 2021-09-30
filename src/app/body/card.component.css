@@ -1,0 +1,53 @@
+.card{
+border-color: rgba(255, 255, 255, 0);
+margin: 20px;
+}
+
+.card-title{
+font-family:"SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: left;
+font-size: 20px;
+font-weight: 600;
+}
+
+.card-price{
+font-family:"SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: left;
+font-size: 14px;
+font-weight: 600;
+line-height: 0;
+}
+
+.card-img{
+height: 230px;
+width: 200px;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.card-text{
+font-family:"SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: left;
+color: #747479;
+font-size: 14px;
+line-height: 2;
+}
+
+
+.btn-primary{
+font-family:"SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+border-color: rgb(255, 255, 255);
+border-width: 2px;
+font-weight: 400;
+color:rgb(255, 255, 255);
+padding: 6px 16px;
+text-align: left;
+text-decoration: none;
+align-items:left ;
+cursor: pointer;
+border-radius: 28px;
+margin-left: -200px;
+margin-top: 20px;
+}
