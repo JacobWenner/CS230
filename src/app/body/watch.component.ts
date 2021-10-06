@@ -4,8 +4,7 @@ import { watch_compare } from './watch-comparison';
 
 @Component({
   selector: 'apple-watch',
-  templateUrl: './watch.component.html',
-  styleUrls: ['./watch.component.css']
+  templateUrl: './watch.component.html'
 })
 export class WatchComponent implements OnInit {
   cards: Card [] = [];

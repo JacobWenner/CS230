@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
@@ -21,6 +22,7 @@ import { TvComponent } from './body/tv_page/tv.component';
 import { MusicComponent } from './body/music_page/music.component';
 import { SupportComponent } from './body/support_page/support.component';
 import { CardComponent } from './body/card.component';
+import { UserInfoComponent } from './body/user-info.component';
 
 @NgModule({
   declarations: [
@@ -41,11 +43,13 @@ import { CardComponent } from './body/card.component';
     WatchComponent,
     TvComponent,
     MusicComponent,
-    SupportComponent
+    SupportComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
