@@ -1,0 +1,42 @@
+<div class="container justify-content-center p-0">
+    <div *ngIf="status === 'Online'">
+        <div *ngIf="imagePath === ''">
+            <a class="nav-link text-secondary" href="#">
+                <img class="profile_pic" src="/assets/WV.png" alt="Profile Picture">
+                <span
+                    class="position-absolute top-20 start-80 translate-middle p-3 bg-success border border-light rounded-circle">
+                </span>
+                <p class="text-nowrap text-truncate">{{name}}</p>
+            </a>
+        </div>
+        <div *ngIf="!(imagePath === '')">
+            <a class="nav-link text-secondary" href="#">
+                <img class="profile_pic" src={{imagePath}} alt="Profile Picture">
+                <span
+                    class="position-absolute top-20 start-80 translate-middle p-3 bg-success border border-light rounded-circle">
+                </span>
+                <p class="text-nowrap text-truncate">{{name}}</p>
+            </a>
+        </div>
+    </div>
+    <div *ngIf="status === 'Offline'">
+        <div *ngIf="imagePath === ''">
+            <a class="nav-link text-secondary" href="#">
+                <img class="profile_pic" src="/assets/WV.png" alt="Profile Picture">
+                <span
+                    class="position-absolute top-20 start-80 translate-middle p-3 bg-danger border border-light rounded-circle">
+                </span>
+                <p class="text-nowrap text-truncate">{{name}}</p>
+            </a>
+        </div>
+        <div *ngIf="!(imagePath === '')">
+            <a class="nav-link text-secondary" href="#">
+                <img class="profile_pic" src={{imagePath}} alt="Profile Picture">
+                <span
+                    class="position-absolute top-20 start-80 translate-middle p-3 bg-danger border border-light rounded-circle">
+                </span>
+                <p class="text-nowrap text-truncate">{{name}}</p>
+            </a>
+        </div>
+    </div>
+</div>
