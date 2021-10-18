@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AccountComponent } from './Pages/account/account.component';
 import {FriendIconComponent} from './Pages/account/friend-icon.component'
 import {ChatIconComponent} from './Pages/account/chat-icon.component'
+import { ChatComponent } from './Pages/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
     FriendIconComponent,
-    ChatIconComponent
+    ChatIconComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
