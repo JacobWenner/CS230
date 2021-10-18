@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AccountComponent } from './pages/account/account.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
 import { ChatIconComponent } from './pages/account/chat-icon.component';
-import { MessagesComponent } from './pages/messages/messages.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { MessagesComponent } from './pages/messages/messages.component';
     AccountComponent,
     FriendIconComponent,
     ChatIconComponent,
-    MessagesComponent,
+    ChatComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
