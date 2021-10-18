@@ -3,22 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccountComponent } from './Pages/account/account.component';
-import {FriendIconComponent} from './Pages/account/friend-icon.component'
-import {ChatIconComponent} from './Pages/account/chat-icon.component'
+import { AccountComponent } from './pages/account/account.component';
+import { FriendIconComponent } from './pages/account/friend-icon.component';
+import { ChatIconComponent } from './pages/account/chat-icon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
     FriendIconComponent,
-    ChatIconComponent
+    ChatIconComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
