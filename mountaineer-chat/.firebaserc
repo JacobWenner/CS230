@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mountaineer-chat": {
+      "hosting": {
+        "mountaineer-chat": [
+          "mountaineer-chat"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mountaineer-chat"
+  }
+}
