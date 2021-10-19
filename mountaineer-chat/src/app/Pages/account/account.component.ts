@@ -5,7 +5,7 @@ import { mock_chats } from './mock-chats';
 import { ChatIcon } from "./chat-icon.model"
 @Component({
   selector: 'app-account',
-  templateUrl: './account.component.html',
+  templateUrl: './other_account.component.html',
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
