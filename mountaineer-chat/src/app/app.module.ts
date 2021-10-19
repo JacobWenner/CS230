@@ -5,8 +5,8 @@ import { AccountScreenComponent } from './pages/account-screen.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChatMembersComponent } from './pages/chat-members.component';
 import { AccountComponent } from './pages/account/account.component';
+import { ChatMembersComponent } from './pages/chat-members.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
 import { ChatIconComponent } from './pages/account/chat-icon.component';
 import { ChatComponent } from './pages/chat/chat.component';
@@ -24,16 +24,18 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
 import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AddFriendComponent } from './pages/account/add-friend.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatMembersComponent
+    ChatMembersComponent,
     AccountComponent,
     FriendIconComponent,
     ChatIconComponent,
     ChatComponent,
+    AddFriendComponent
   ],
   imports: [
     BrowserModule,
