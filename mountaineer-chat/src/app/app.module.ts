@@ -7,19 +7,9 @@ import { AccountComponent } from './pages/account/account.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
 import { ChatIconComponent } from './pages/account/chat-icon.component';
 import { ChatComponent } from './pages/chat/chat.component';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
-import {
-  provideAnalytics,
-  getAnalytics,
-  ScreenTrackingService,
-  UserTrackingService,
-} from '@angular/fire/analytics';
-import { provideAuth, getAuth } from '@angular/fire/auth';
-import { provideDatabase, getDatabase } from '@angular/fire/database';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { providePerformance, getPerformance } from '@angular/fire/performance';
-import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @NgModule({
   declarations: [
@@ -32,15 +22,8 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAnalytics(() => getAnalytics()),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    providePerformance(() => getPerformance()),
-    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
