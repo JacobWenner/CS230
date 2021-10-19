@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { mock_friends } from './mock-friends';
-import { FriendIcon } from './friend-icon.model';
 import { mock_chats } from './mock-chats';
 import { ChatIcon } from './chat-icon.model';
+import { FriendIcon } from './friend-icon.model';
+
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',

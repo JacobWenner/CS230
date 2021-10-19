@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccountComponent } from './pages/account/account.component';
-import { FriendIconComponent } from './pages/account/friend-icon.component';
-import { ChatIconComponent } from './pages/account/chat-icon.component';
-import { ChatComponent } from './pages/chat/chat.component';
+import { AccountComponent } from './Pages/account/account.component';
+import { FriendIconComponent } from './Pages/account/friend-icon.component';
+import { ChatIconComponent } from './Pages/account/chat-icon.component';
+import { ChatComponent } from './Pages/chat/chat.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import {
@@ -20,6 +20,7 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
 import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AddFriendComponent } from './Pages/account/add-friend.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
     FriendIconComponent,
     ChatIconComponent,
     ChatComponent,
+    AddFriendComponent
   ],
   imports: [
     BrowserModule,
