@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AccountScreenComponent } from './account/account-screen.component';
+import { AccountScreenComponent } from './pages/account-screen.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
