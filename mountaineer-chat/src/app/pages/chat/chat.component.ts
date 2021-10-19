@@ -1,10 +1,8 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-chat',
-    templateUrl: 'chat.component.html',
-    styleUrls: ['./chat.component.css']
+  selector: 'app-chat',
+  templateUrl: 'chat.component.html',
+  styleUrls: ['./chat.component.css'],
 })
-export class ChatComponent {
-
-}
+export class ChatComponent {}
