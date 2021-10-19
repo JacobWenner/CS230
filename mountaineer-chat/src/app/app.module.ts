@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AccountScreenComponent } from './pages/account-screen.component';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoggedOutComponent } from './pages/logged-out/logged-out.component';
 import { AccountComponent } from './pages/account/account.component';
 import { ChatMembersComponent } from './pages/chat-members.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
@@ -30,6 +30,7 @@ import { AddFriendComponent } from './pages/account/add-friend.component';
 @NgModule({
   declarations: [
     AppComponent,
+    LoggedOutComponent,
     ChatMembersComponent,
     AccountComponent,
     FriendIconComponent,
