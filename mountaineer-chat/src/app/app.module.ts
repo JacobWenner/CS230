@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChatMembersComponent } from './pages/chat-members.component';
 import { AccountComponent } from './pages/account/account.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
 import { ChatIconComponent } from './pages/account/chat-icon.component';
 import { ChatComponent } from './pages/chat/chat.component';
+
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import {
@@ -24,6 +26,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 @NgModule({
   declarations: [
     AppComponent,
+    ChatMembersComponent
     AccountComponent,
     FriendIconComponent,
     ChatIconComponent,
