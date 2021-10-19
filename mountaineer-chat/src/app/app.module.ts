@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AccountScreenComponent } from './pages/account-screen.component';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccountComponent } from './Pages/account/account.component';
-import { FriendIconComponent } from './Pages/account/friend-icon.component';
-import { ChatIconComponent } from './Pages/account/chat-icon.component';
-import { ChatComponent } from './Pages/chat/chat.component';
+import { AccountComponent } from './pages/account/account.component';
+import { ChatMembersComponent } from './pages/chat-members.component';
+import { AccountComponent } from './pages/account/account.component';
+import { FriendIconComponent } from './pages/account/friend-icon.component';
+import { ChatIconComponent } from './pages/account/chat-icon.component';
+import { ChatComponent } from './pages/chat/chat.component';
+
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import {
@@ -22,9 +27,11 @@ import { providePerformance, getPerformance } from '@angular/fire/performance';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { AddFriendComponent } from './Pages/account/add-friend.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    ChatMembersComponent
     AccountComponent,
     FriendIconComponent,
     ChatIconComponent,
