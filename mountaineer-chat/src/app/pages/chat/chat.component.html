@@ -35,10 +35,10 @@
   <div class="chatBox d-inline-flex" style="width: 90%">
     <div class="p-5" style="width: 75%">
       <ul>
-  <li class="text" *ngFor="let message of messages | async">
-    {{message.text}}
-  </li>
-</ul>
+        <li class="text" *ngFor="let message of messages | async">
+          {{ message.text }}
+        </li>
+      </ul>
     </div>
     <div class="p-5" style="width: 25%">
       (Number of reactions)
@@ -82,7 +82,9 @@
   <div style="width: 10%">
     <div class="nav-pills">
       <div class="nav-item">
-        <button class="btn btn-primary" (click)="addMessage(newMessage.value)">Send</button>
+        <button class="btn btn-primary" (click)="addMessage(newMessage.value)">
+          Send
+        </button>
       </div>
     </div>
   </div>
