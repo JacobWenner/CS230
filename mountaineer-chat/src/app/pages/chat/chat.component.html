@@ -34,7 +34,11 @@
 
   <div class="chatBox d-inline-flex" style="width: 90%">
     <div class="p-5" style="width: 75%">
-      AccountName: This is a test message
+      <ul>
+        <li class="text" *ngFor="let message of messages | async">
+          {{ message.text }}
+        </li>
+      </ul>
     </div>
     <div class="p-5" style="width: 25%">
       (Number of reactions)
@@ -69,8 +73,8 @@
         type="text"
         class="form-control"
         style="background-color: rgb(223, 219, 219); height: 50px"
-        id="autoSizingInput"
         placeholder="Type Message..."
+        #newMessage
       />
     </div>
   </div>
@@ -78,14 +82,9 @@
   <div style="width: 10%">
     <div class="nav-pills">
       <div class="nav-item">
-        <a
-          class="nav-link active"
-          style="text-align: center; height: 50px"
-          aria-current="page"
-          href="#"
-        >
+        <button class="btn btn-primary" (click)="addMessage(newMessage.value)">
           Send
-        </a>
+        </button>
       </div>
     </div>
   </div>
