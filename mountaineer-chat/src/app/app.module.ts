@@ -1,21 +1,55 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AccountScreenComponent } from './pages/account-screen.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoggedOutComponent } from './Pages/logged-out/logged-out.component';
+import { LoggedOutComponent } from './pages/logged-out/logged-out.component';
+import { AccountComponent } from './pages/account/account.component';
+import { ChatMembersComponent } from './pages/chat-members.component';
+import { FriendIconComponent } from './pages/account/friend-icon.component';
+import { ChatIconComponent } from './pages/account/chat-icon.component';
+import { ChatComponent } from './pages/chat/chat.component';
+
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import {
+  provideAnalytics,
+  getAnalytics,
+  ScreenTrackingService,
+  UserTrackingService,
+} from '@angular/fire/analytics';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { providePerformance, getPerformance } from '@angular/fire/performance';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AddFriendComponent } from './pages/account/add-friend.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoggedOutComponent
+    LoggedOutComponent,
+    ChatMembersComponent,
+    AccountComponent,
+    FriendIconComponent,
+    ChatIconComponent,
+    ChatComponent,
+    AddFriendComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    providePerformance(() => getPerformance()),
+    provideStorage(() => getStorage()),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ScreenTrackingService, UserTrackingService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
