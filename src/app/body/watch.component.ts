@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from './cards.model';
+import { DataService } from './data.service';
 import { watch_compare } from './watch-comparison';
 
 @Component({
@@ -9,10 +10,24 @@ import { watch_compare } from './watch-comparison';
 export class WatchComponent implements OnInit {
   cards: Card [] = [];
 
-  ngOnInit(): void {
+  constructor (private dataService: DataService){
 
-    for (var cards of watch_compare){
-      this.cards.push(new Card(cards))
-    }
   }
+
+  ngOnInit(): void {
+   
+    this.display();
+  }
+
+      
+  display()
+  {
+    this.dataService.getWatch().subscribe((data: Card) =>
+    {
+        console.log(data);
+     
+    })
+
+  }
+
 }
