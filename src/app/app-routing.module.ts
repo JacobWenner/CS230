@@ -9,6 +9,7 @@ import { StoreComponent } from './body/store.component';
 import { SupportComponent } from './body/support_page/support.component';
 import { TvComponent } from './body/tv_page/tv.component';
 import { WatchComponent } from './body/watch.component';
+import { AccountComponent } from './body/account.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'tv', component: TvComponent },
   { path: 'music', component: MusicComponent },
   { path: 'support', component: SupportComponent },
+  { path: 'account', component: AccountComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

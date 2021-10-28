@@ -23,10 +23,13 @@ import { MusicComponent } from './body/music_page/music.component';
 import { SupportComponent } from './body/support_page/support.component';
 import { CardComponent } from './body/card.component';
 import { UserInfoComponent } from './body/user-info.component';
+import { AccountComponent } from './body/account.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AccountComponent,
     LayoutComponent,
     TopNavBarComponent,
     Row_1Component,
@@ -49,7 +52,8 @@ import { UserInfoComponent } from './body/user-info.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
