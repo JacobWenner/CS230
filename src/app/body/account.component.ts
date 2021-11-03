@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { UserInfo } from "./user-info.model";
 import { DataService } from "./data.service";
+import { DatabaseService } from "./database.service";
 
 @Component({
     selector: 'account',
@@ -10,8 +11,8 @@ import { DataService } from "./data.service";
 })
 export class AccountComponent{
 
-    constructor (private dataService: DataService){
-
+    constructor (private dataService: DataService, private dbService:DatabaseService){
+        dbService.showData();
     }
   
     onAdd(data: UserInfo){
