@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "apple-b9dd1": {
+      "hosting": {
+        "Apple": [
+          "apple-b9dd1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "apple-b9dd1"
+  }
+}
