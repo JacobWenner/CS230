@@ -10,6 +10,7 @@ import { SupportComponent } from './body/support_page/support.component';
 import { TvComponent } from './body/tv_page/tv.component';
 import { WatchComponent } from './body/watch.component';
 import { AccountComponent } from './body/account.component';
+import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'music', component: MusicComponent },
   { path: 'support', component: SupportComponent },
   { path: 'account', component: AccountComponent },
+  { path: 'auth', component: AuthComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
