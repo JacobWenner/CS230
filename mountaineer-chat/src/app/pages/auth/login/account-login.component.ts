@@ -14,9 +14,11 @@ export class AccountLoginComponent {
   constructor(public auth: AngularFireAuth) {}
   login(data: NgForm) {
     this.auth.signInWithEmailAndPassword(data.value.email, data.value.password);
+    console.log(this.auth.user);
     data.resetForm();
   }
   logout() {
+    console.log(this.auth.user);
     this.auth.signOut();
   }
 }
