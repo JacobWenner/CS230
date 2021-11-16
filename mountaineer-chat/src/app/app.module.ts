@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AccountScreenComponent } from './pages/account-screen.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // custom modules
 
@@ -51,6 +52,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   bootstrap: [AppComponent],
