@@ -64,18 +64,19 @@
     </button>
     <!--Indicator-->
     <button
+      (click)="setStatus();"
       type="button"
       class="btn btn-link"
       data-bs-toggle="tooltip"
       data-bs-placement="bottom"
-      title="User Status"
+      title="{{status}}"
     >
       <svg
         class="indidcator"
         xmlns="http://www.w3.org/2000/svg"
         width="30"
         height="30"
-        fill="red"
+        attr.fill="{{statusColor}}"
         class="bi bi-circle-fill"
         viewBox="0 0 16 16"
       >
