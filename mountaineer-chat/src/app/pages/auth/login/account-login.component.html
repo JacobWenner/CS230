@@ -14,7 +14,7 @@
         </div>
       </main>
       <ng-template #authTemplate [ngSwitch]="authSwitch">
-        <ng-template #showLogin [ngSwitchCase]= "'login'">
+        <ng-template #showLogin [ngSwitchCase]="'login'">
           <form #authForm="ngForm" (ngSubmit)="login(authForm)">
             <img
               class="mb-4"
@@ -24,7 +24,7 @@
               height="57"
             />
             <h1 class="h3 mb-3 fw-normal">Welcome back! Sign in below:</h1>
-  
+
             <div class="form-floating">
               <input
                 type="email"
@@ -63,13 +63,13 @@
             <button
               class="w-100 btn btn-lg btn-primary"
               type="submit"
-              (click)="authSwitch='create'"
+              (click)="authSwitch = 'create'"
             >
               Sign up
             </button>
           </form>
         </ng-template>
-        <ng-template #showCreate [ngSwitchCase]= "'create'">
+        <ng-template #showCreate [ngSwitchCase]="'create'">
           <form #authForm="ngForm" (ngSubmit)="create(authForm)">
             <img
               class="mb-4"
@@ -79,7 +79,7 @@
               height="57"
             />
             <h1 class="h3 mb-3 fw-normal">Meet Mountaineers! Sign up below!</h1>
-  
+
             <div class="form-floating">
               <input
                 type="email"
@@ -124,18 +124,21 @@
             <button
               class="w-100 btn btn-lg btn-primary"
               type="submit"
-              [disabled]="!authForm.valid && authForm.value.password != authForm.value.passwordConfirm"
+              [disabled]="
+                !authForm.valid &&
+                authForm.value.password != authForm.value.passwordConfirm
+              "
               (click)="create(authForm)"
             >
               Sign up
             </button>
             <button
-            class="w-100 btn btn-lg btn-primary"
-            type="submit"
-            (click)="authSwitch='login'"
-          >
-            Back to login
-          </button>
+              class="w-100 btn btn-lg btn-primary"
+              type="submit"
+              (click)="authSwitch = 'login'"
+            >
+              Back to login
+            </button>
           </form>
         </ng-template>
       </ng-template>

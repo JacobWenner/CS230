@@ -11,7 +11,10 @@ export class AccountLoginComponent {
   authSwitch = 'login';
   constructor(public auth: AngularFireAuth) {}
   create(data: NgForm) {
-    this.auth.createUserWithEmailAndPassword(data.value.email, data.value.password);
+    this.auth.createUserWithEmailAndPassword(
+      data.value.email,
+      data.value.password
+    );
     console.log(this.auth.user);
     data.resetForm();
   }
