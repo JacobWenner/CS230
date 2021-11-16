@@ -2,13 +2,14 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AccountScreenComponent } from './pages/account-screen.component';
+import { AccountCreationComponent } from './pages/auth/create/account-creation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 // custom modules
 
-import { LoggedOutComponent } from './pages/logged-out/logged-out.component';
+import { LoggedOutComponent } from './pages/auth/logout/logged-out.component';
 import { AccountComponent } from './pages/account/account.component';
 import { ChatMembersComponent } from './pages/chat-members.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
@@ -36,6 +37,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 // deployment environment vars
 
 import { environment } from '../environments/environment';
+import { AccountLoginComponent } from './pages/auth/login/account-login.component';
 
 @NgModule({
   declarations: [
@@ -46,10 +48,12 @@ import { environment } from '../environments/environment';
     FriendIconComponent,
     ChatIconComponent,
     ChatComponent,
-    AddFriendComponent
+    AddFriendComponent,
+    AccountLoginComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
