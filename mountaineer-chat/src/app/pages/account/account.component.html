@@ -19,6 +19,28 @@
     </ul>
   </div>
   <div class="align-self-top">
+    <!--Add Friend-->
+    <button
+      onclick="location.href='/addFriend'"
+      type="button"
+      class="btn btn-link"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      title="Add Friends"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="60"
+        height="60"
+        fill="black"
+        class="bi bi-plus"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"
+        />
+      </svg>
+    </button>
     <!--Profile Edit-->
     <button
       type="button"
@@ -42,18 +64,19 @@
     </button>
     <!--Indicator-->
     <button
+      (click)="setStatus();"
       type="button"
       class="btn btn-link"
       data-bs-toggle="tooltip"
       data-bs-placement="bottom"
-      title="User Status"
+      title="{{status}}"
     >
       <svg
         class="indidcator"
         xmlns="http://www.w3.org/2000/svg"
         width="30"
         height="30"
-        fill="red"
+        attr.fill="{{statusColor}}"
         class="bi bi-circle-fill"
         viewBox="0 0 16 16"
       >
@@ -80,7 +103,7 @@
   </div>
 </div>
 <!--Friends List-->
-<div class="p-3">
+<div class="p-3 addFriend">
   <input
     type="text"
     class="form-control"
