@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 
 // custom modules
 
-import { LoggedOutComponent } from './pages/auth/logout/logged-out.component';
 import { AccountComponent } from './pages/account/account.component';
 import { ChatMembersComponent } from './pages/chat-members.component';
 import { FriendIconComponent } from './pages/account/friend-icon.component';
@@ -41,7 +40,6 @@ import { AccountLoginComponent } from './pages/auth/login/account-login.componen
 @NgModule({
   declarations: [
     AppComponent,
-    LoggedOutComponent,
     ChatMembersComponent,
     AccountComponent,
     FriendIconComponent,
