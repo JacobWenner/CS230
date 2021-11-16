@@ -3,8 +3,14 @@
     <body class="text-center">
       <main class="form-signin">
         <div *ngIf="auth.user | async as user; else showLogin">
-          <h1>Hello {{ user }}!</h1>
-          <button (click)="logout()">Logout</button>
+          <h1>Hello {{ user.email }}!</h1>
+          <button
+            class="w-100 btn btn-lg btn-primary"
+            type="submit"
+            (click)="logout()"
+          >
+            Logout
+          </button>
         </div>
       </main>
       <ng-template #showLogin>
