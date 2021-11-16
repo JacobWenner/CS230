@@ -125,7 +125,7 @@
               class="w-100 btn btn-lg btn-primary"
               type="submit"
               [disabled]="
-                !authForm.valid &&
+                !authForm.valid ||
                 authForm.value.password != authForm.value.passwordConfirm
               "
               (click)="create(authForm)"
