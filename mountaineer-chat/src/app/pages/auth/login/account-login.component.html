@@ -1,0 +1,147 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <body class="text-center">
+      <main class="form-signin">
+        <div *ngIf="auth.user | async as user; else authTemplate">
+          <h1>Hello {{ user.email }}!</h1>
+          <button
+            class="w-100 btn btn-lg btn-primary"
+            type="submit"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+        </div>
+      </main>
+      <ng-template #authTemplate [ngSwitch]="authSwitch">
+        <ng-template #showLogin [ngSwitchCase]="'login'">
+          <form #authForm="ngForm" (ngSubmit)="login(authForm)">
+            <img
+              class="mb-4"
+              src="/assets/wvu1.jpg"
+              alt=""
+              width="72"
+              height="57"
+            />
+            <h1 class="h3 mb-3 fw-normal">Welcome back! Sign in below:</h1>
+
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                ngModel
+                name="email"
+                required
+                email
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+                ngModel
+                name="password"
+                required
+                password
+                minlength="8"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button
+              class="w-100 btn btn-lg btn-primary"
+              type="submit"
+              [disabled]="!authForm.valid"
+              (click)="login(authForm)"
+            >
+              Sign in
+            </button>
+            <button
+              class="w-100 btn btn-lg btn-primary"
+              type="submit"
+              (click)="authSwitch = 'create'"
+            >
+              Sign up
+            </button>
+          </form>
+        </ng-template>
+        <ng-template #showCreate [ngSwitchCase]="'create'">
+          <form #authForm="ngForm" (ngSubmit)="create(authForm)">
+            <img
+              class="mb-4"
+              src="/assets/wvu1.jpg"
+              alt=""
+              width="72"
+              height="57"
+            />
+            <h1 class="h3 mb-3 fw-normal">Meet Mountaineers! Sign up below!</h1>
+
+            <div class="form-floating">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+                ngModel
+                name="email"
+                required
+                email
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+                ngModel
+                name="password"
+                required
+                password
+                minlength="8"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+                ngModel
+                name="passwordConfirm"
+                required
+                password
+                minlength="8"
+              />
+              <label for="floatingPassword">Confirm Password</label>
+            </div>
+            <button
+              class="w-100 btn btn-lg btn-primary"
+              type="submit"
+              [disabled]="
+                !authForm.valid ||
+                authForm.value.password != authForm.value.passwordConfirm
+              "
+              (click)="create(authForm)"
+            >
+              Sign up
+            </button>
+            <button
+              class="w-100 btn btn-lg btn-primary"
+              type="submit"
+              (click)="authSwitch = 'login'"
+            >
+              Back to login
+            </button>
+          </form>
+        </ng-template>
+      </ng-template>
+    </body>
+  </div>
+</div>

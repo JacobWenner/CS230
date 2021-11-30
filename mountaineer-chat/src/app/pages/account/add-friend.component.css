@@ -1,25 +1,38 @@
-.header{
+.header1{
     font-size: 35px;
-    padding-top: 40px
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;           
+    align-items:center;
+    justify-content: space-between;
 }
-.searchBar{
-    padding: 40px 0px 0px 0px;
-}
-.form-inline
+.header2
 {
-    align-self: center; 
-    padding: 50px 0px 0px 0px; 
-    width: 800px;
+    align-self: center;
+    padding-left: 665px;
 }
-.form-control
+.home
 {
-    width: 600px;
-    border-radius: 30px; 
-    font-family: Targetica, Helvetica Neue, Helvetica, Arial, sans-serif; 
-    height: 40px; 
+    display: flex;
+    align-self: flex-end;
+    float: right;
 }
-.left-shift{
-    font-size: 25px;
-    float: left;
-    padding: 20px 200px 40px 50px;
+.searchBar {
+  padding: 40px 0px 0px 0px;
+}
+.form-inline {
+  align-self: center;
+  padding: 50px 0px 0px 0px;
+  width: 800px;
+}
+.form-control {
+  width: 600px;
+  border-radius: 30px;
+  font-family: Targetica, Helvetica Neue, Helvetica, Arial, sans-serif;
+  height: 40px;
+}
+.left-shift {
+  font-size: 25px;
+  float: left;
+  padding: 20px 200px 40px 50px;
 }
