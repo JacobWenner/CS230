@@ -1,5 +1,5 @@
 <div class="container justify-content-center p-0">
-  <div *ngIf="status === 'Online'">
+  <div *ngIf="status === '1'">
     <div *ngIf="imagePath === ''">
       <a class="nav-link text-secondary" href="#">
         <img class="profile_pic" src="/assets/WV.png" alt="Profile Picture" />
@@ -39,7 +39,7 @@
       </a>
     </div>
   </div>
-  <div *ngIf="status === 'Offline'">
+  <div *ngIf="status === '0'">
     <div *ngIf="imagePath === ''">
       <a class="nav-link text-secondary" href="#">
         <img class="profile_pic" src="/assets/WV.png" alt="Profile Picture" />

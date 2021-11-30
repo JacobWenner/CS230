@@ -17,3 +17,9 @@ export class FriendIcon {
     this.imagePath = imagePath;
   }
 }
+
+export interface UserStatus {
+
+  status: string;
+
+}

@@ -3,6 +3,8 @@ import { mock_friends } from './mock-friends';
 import { mock_chats } from './mock-chats';
 import { ChatIcon } from './chat-icon.model';
 import { FriendIcon } from './friend-icon.model';
+import { StatusService } from './status.service';
+import { UserStatus} from './friend-icon.model';
 
 @Component({
   selector: 'app-account',
@@ -10,6 +12,7 @@ import { FriendIcon } from './friend-icon.model';
   styleUrls: ['./account.component.css'],
 })
 export class AccountComponent implements OnInit {
+  userStat: UserStatus | undefined;
   friends: FriendIcon[] = [];
   chats: ChatIcon[] = [];
   usersUrl: string = "https://mountaineer-chat-default-rtdb.firebaseio.com/users";
@@ -18,7 +21,8 @@ export class AccountComponent implements OnInit {
   statusColor: string = "A2A190";
   status: string = "Offline";
 
-  constructor() {
+  constructor(private statusService:StatusService) {
+    
     for (var friend of mock_friends) {
       this.friends.push(new FriendIcon(friend));
     }
@@ -27,7 +31,16 @@ export class AccountComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showData();
+  }
+
+  showData(){
+    this.statusService.getData().subscribe((data: UserStatus) => {
+      console.log(data);
+      this.userStat = data;
+    })
+  }
 
   pushStatus(num: number) {
     console.log("push" + num);
